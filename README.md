@@ -15,8 +15,6 @@ This project contains notes and examples related to **IPv4 addressing**, aimed a
 		- [Reserved IP Addresses](#reserved-ip-addresses)
 	- [Key Concepts](#key-concepts)
 		- [Network Overlap](#network-overlap)
-		- [DHCP (Dynamic Host Configuration Protocol)](#dhcp-dynamic-host-configuration-protocol)
-			- [How DHCP Works:](#how-dhcp-works)
 		- [Subnets](#subnets)
 		- [Network Devices: Switch and Router](#network-devices-switch-and-router)
 
@@ -103,17 +101,6 @@ These addresses are not used for common devices on the public Internet.
 - **IP conflicts**: Devices may end up with the same IP address, leading to connectivity problems.
 - **Security**: Traffic might be routed unexpectedly.
 
-### DHCP (Dynamic Host Configuration Protocol)
-
-**DHCP** is a protocol that automatically assigns IP addresses to devices on a network.
-
-#### How DHCP Works:
-
-1. **Discovery**: The client sends a DHCP Discover broadcast.
-2. **Offer**: The DHCP server responds with an IP offer.
-3. **Request**: The client accepts the offer with a DHCP Request.
-4. **Acknowledgment**: The server confirms with a DHCP Acknowledgment.
-
 ### Subnets
 
 A **subnet** divides a large network into smaller, more manageable networks. Example of subnet calculation:
@@ -122,11 +109,14 @@ For the IP **192.168.0.20/26**, the subnet mask is `255.255.255.192`, which has 
 
 256 - 192 = 64
 
-Thus, the subnet intervals are:
+Thus, the subnet interval is:
 
 - **192.168.0.0**
-- **192.168.0.64**
-- **192.168.0.128**
+- **192.168.0.63**
+ 
+ The **192.168.0.0** is the Network IP.  
+ The **192.168.0.63** is the Broadcasting IP.  
+ All the other ones are Hosts.  
 
 ### Network Devices: Switch and Router
 
