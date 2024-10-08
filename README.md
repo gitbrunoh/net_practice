@@ -14,6 +14,7 @@ This project contains notes and examples related to **IPv4 addressing**, aimed a
 		- [Private IP Addresses](#private-ip-addresses)
 		- [Reserved IP Addresses](#reserved-ip-addresses)
 	- [Key Concepts](#key-concepts)
+		- [TCP (Tranfer Control Protocol)](#tcp-tranfer-control-protocol)
 		- [Network Overlap](#network-overlap)
 		- [Subnets](#subnets)
 		- [Network Devices: Switch and Router](#network-devices-switch-and-router)
@@ -92,6 +93,18 @@ These addresses are not used for common devices on the public Internet.
 ---
 
 ## Key Concepts
+
+### TCP (Tranfer Control Protocol)
+
+Imagine TCP as a super-reliable delivery service for the Internet. When you send a message or data, TCP guarantees that:
+
+1. **Connection Established**: Before anything else, the two computers shake hands (make a connection) to ensure that they are both ready to talk.
+2. **Data Splitting**: The large message is divided into smaller packages, as if they were several boxes of a delivery.
+3. **Sending and Receiving**: Each package is sent one by one, and the recipient confirms the arrival of each one, like a delivery receipt.
+4. **Resending Lost Packets**: If a packet is lost on the way, TCP asks to resend it, ensuring that nothing is lost.
+5. **Packet reassembly**: When all the packets have arrived, TCP puts everything back together in the original message, as if it were assembling a jigsaw puzzle.
+
+This ensures that the message arrives complete, in the right order and without errors, providing reliable communication between devices on the network.
 
 ### Network Overlap
 
